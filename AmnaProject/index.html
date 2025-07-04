@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlumeSkin - Natural Beauty, Radiant Skin</title>
+    <meta name="description" content="Discover premium skincare products with natural ingredients. Get personalized skincare routines and expert advice for radiant, healthy skin.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>BlumeSkin</h1>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#products" class="nav-link">Products</a>
+                <a href="#routine-builder" class="nav-link">Routine Builder</a>
+                <a href="#blog" class="nav-link">Blog</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Natural Beauty, Radiant Skin</h2>
+            <p>Discover the power of nature with our premium skincare collection. Crafted with the finest ingredients for your skin's unique needs.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('products')">Shop Now</button>
+                <button class="btn btn-secondary" onclick="scrollToSection('routine-builder')">Build Your Routine</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Natural skincare products with plants" class="hero-img">
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Our Products</h2>
+            <div class="product-filters">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="cleansers">Cleansers</button>
+                <button class="filter-btn" data-filter="serums">Serums</button>
+                <button class="filter-btn" data-filter="moisturizers">Moisturizers</button>
+                <button class="filter-btn" data-filter="treatments">Treatments</button>
+            </div>
+            <div class="products-grid">
+                <div class="product-card" data-category="serums">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Vitamin C Serum">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vitamin C Brightening Serum</h3>
+                        <p>20% stabilized vitamin C formula for radiant, even-toned skin</p>
+                        <div class="product-price">Rs. 45</div>
+                        <div class="product-tags">
+                            <span class="tag">Brightening</span>
+                            <span class="tag">Anti-aging</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-category="cleansers">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Gentle Foaming Cleanser">
+                    </div>
+                    <div class="product-info">
+                        <h3>Gentle Foaming Cleanser</h3>
+                        <p>pH-balanced formula that cleanses without stripping natural oils</p>
+                        <div class="product-price">Rs. 28</div>
+                        <div class="product-tags">
+                            <span class="tag">Gentle</span>
+                            <span class="tag">All Skin Types</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-category="moisturizers">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Hyaluronic Acid Cream">
+                    </div>
+                    <div class="product-info">
+                        <h3>Hyaluronic Hydra Cream</h3>
+                        <p>Multi-molecular hyaluronic acid for deep, lasting hydration</p>
+                        <div class="product-price">Rs. 52</div>
+                        <div class="product-tags">
+                            <span class="tag">Hydrating</span>
+                            <span class="tag">Plumping</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-category="treatments">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1580870069867-74c57ee1bb07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Retinol Treatment">
+                    </div>
+                    <div class="product-info">
+                        <h3>Retinol Renewal Complex</h3>
+                        <p>Advanced retinol formula for smoother, younger-looking skin</p>
+                        <div class="product-price">Rs. 68</div>
+                        <div class="product-tags">
+                            <span class="tag">Anti-aging</span>
+                            <span class="tag">Renewal</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-category="cleansers">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1594736797933-d0beba0a1a8e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Clay Face Mask">
+                    </div>
+                    <div class="product-info">
+                        <h3>Purifying Clay Mask</h3>
+                        <p>Deep-cleansing clay mask with botanical extracts</p>
+                        <div class="product-price">Rs. 34</div>
+                        <div class="product-tags">
+                            <span class="tag">Purifying</span>
+                            <span class="tag">Oily Skin</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-category="serums">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Niacinamide Serum">
+                    </div>
+                    <div class="product-info">
+                        <h3>Niacinamide Pore Refiner</h3>
+                        <p>10% niacinamide to minimize pores and control oil</p>
+                        <div class="product-price">Rs. 38</div>
+                        <div class="product-tags">
+                            <span class="tag">Pore Minimizing</span>
+                            <span class="tag">Oil Control</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Routine Builder Section -->
+    <section id="routine-builder" class="routine-builder">
+        <div class="container">
+            <h2>Build Your Perfect Routine</h2>
+            <p>Get personalized skincare recommendations based on your skin type and concerns</p>
+            
+            <div class="routine-form">
+                <div class="form-step active" id="step1">
+                    <h3>Step 1: What's your skin type?</h3>
+                    <div class="skin-type-options">
+                        <label class="skin-type-option">
+                            <input type="radio" name="skinType" value="normal">
+                            <div class="option-content">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Normal</span>
+                                <p>Balanced, not too oily or dry</p>
+                            </div>
+                        </label>
+                        <label class="skin-type-option">
+                            <input type="radio" name="skinType" value="dry">
+                            <div class="option-content">
+                                <i class="fas fa-sun"></i>
+                                <span>Dry</span>
+                                <p>Feels tight, flaky, or rough</p>
+                            </div>
+                        </label>
+                        <label class="skin-type-option">
+                            <input type="radio" name="skinType" value="oily">
+                            <div class="option-content">
+                                <i class="fas fa-tint"></i>
+                                <span>Oily</span>
+                                <p>Shiny, enlarged pores, prone to breakouts</p>
+                            </div>
+                        </label>
+                        <label class="skin-type-option">
+                            <input type="radio" name="skinType" value="combination">
+                            <div class="option-content">
+                                <i class="fas fa-adjust"></i>
+                                <span>Combination</span>
+                                <p>Oily T-zone, dry cheeks</p>
+                            </div>
+                        </label>
+                        <label class="skin-type-option">
+                            <input type="radio" name="skinType" value="sensitive">
+                            <div class="option-content">
+                                <i class="fas fa-heart"></i>
+                                <span>Sensitive</span>
+                                <p>Easily irritated, reactive</p>
+                            </div>
+                        </label>
+                    </div>
+                    <button class="btn btn-primary" onclick="nextStep()">Next</button>
+                </div>
+
+                <div class="form-step" id="step2">
+                    <h3>Step 2: What are your main concerns?</h3>
+                    <div class="concerns-options">
+                        <label class="concern-option">
+                            <input type="checkbox" name="concerns" value="acne">
+                            <span>Acne/Breakouts</span>
+                        </label>
+                        <label class="concern-option">
+                            <input type="checkbox" name="concerns" value="aging">
+                            <span>Fine Lines/Aging</span>
+                        </label>
+                        <label class="concern-option">
+                            <input type="checkbox" name="concerns" value="dark-spots">
+                            <span>Dark Spots/Hyperpigmentation</span>
+                        </label>
+                        <label class="concern-option">
+                            <input type="checkbox" name="concerns" value="dryness">
+                            <span>Dryness/Dehydration</span>
+                        </label>
+                        <label class="concern-option">
+                            <input type="checkbox" name="concerns" value="sensitivity">
+                            <span>Sensitivity/Irritation</span>
+                        </label>
+                        <label class="concern-option">
+                            <input type="checkbox" name="concerns" value="pores">
+                            <span>Large Pores</span>
+                        </label>
+                        <label class="concern-option">
+                            <input type="checkbox" name="concerns" value="dullness">
+                            <span>Dullness/Uneven Tone</span>
+                        </label>
+                    </div>
+                    <div class="step-buttons">
+                        <button class="btn btn-secondary" onclick="prevStep()">Previous</button>
+                        <button class="btn btn-primary" onclick="generateRoutine()">Generate Routine</button>
+                    </div>
+                </div>
+
+                <div class="form-step" id="step3">
+                    <h3>Your Personalized Routine</h3>
+                    <div class="routine-results" id="routineResults">
+                        <!-- Results will be populated by JavaScript -->
+                    </div>
+                    <button class="btn btn-secondary" onclick="resetRoutine()">Start Over</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2>Skincare Insights</h2>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Skincare science research">
+                    </div>
+                    <div class="blog-content">
+                        <h3>The Science Behind Hyaluronic Acid</h3>
+                        <p>Discover how this powerful humectant can transform your skin's hydration levels and why it's essential for all skin types.</p>
+                        <div class="blog-meta">
+                            <span class="date">July 15, 2024</span>
+                            <span class="category">Ingredients</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1487875961445-47a00398c267?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Morning skincare routine">
+                    </div>
+                    <div class="blog-content">
+                        <h3>Building Your First Skincare Routine</h3>
+                        <p>A beginner's guide to creating an effective skincare routine that works for your skin type and lifestyle.</p>
+                        <div class="blog-meta">
+                            <span class="date">July 10, 2024</span>
+                            <span class="category">Routine</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1512207846876-763d4e0928e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Natural skincare ingredients">
+                    </div>
+                    <div class="blog-content">
+                        <h3>Natural vs. Synthetic: What's Better?</h3>
+                        <p>Debunking myths about natural and synthetic ingredients in skincare and what really matters for your skin.</p>
+                        <div class="blog-meta">
+                            <span class="date">July 5, 2024</span>
+                            <span class="category">Education</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About BlumeSkin</h2>
+                    <p>Founded with a passion for natural beauty and scientific innovation, BlumeSkin combines the best of both worlds to create effective, gentle skincare solutions.</p>
+                    <p>Our products are formulated with carefully selected ingredients that work in harmony with your skin's natural processes, delivering visible results without compromise.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>50,000+</h3>
+                            <p>Happy Customers</p>
+                        </div>
+                        <div class="stat">
+                            <h3>98%</h3>
+                            <p>Natural Ingredients</p>
+                        </div>
+                        <div class="stat">
+                            <h3>5+</h3>
+                            <p>Years of Research</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Skincare laboratory research" class="about-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>hello@blumeskin.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 9304972733</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Maulana Azad Girls Hostel, Patna</span>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Chatbot -->
+    <div class="chatbot" id="chatbot">
+        <div class="chatbot-header">
+            <h4>Skincare Assistant</h4>
+            <button class="chatbot-toggle" onclick="toggleChat()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chatbot-messages" id="chatMessages">
+            <div class="message bot-message">
+                <p>Hi! I'm your skincare assistant. Ask me about acne, aging, dry skin, or skincare routines!</p>
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatInput" placeholder="Ask me about skincare...">
+            <button onclick="sendMessage()">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Chatbot Toggle Button -->
+    <button class="chatbot-fab" onclick="toggleChat()">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BlumeSkin</h3>
+                    <p>Natural beauty, radiant skin. Discover the power of nature with our premium skincare collection.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#routine-builder">Routine Builder</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Care</h4>
+                    <ul>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BlumeSkin. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.getElementById('navToggle');
+            const navMenu = document.getElementById('navMenu');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            navToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+        });
+
+        // Smooth scrolling
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Product filtering
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const productCards = document.querySelectorAll('.product-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const filter = this.dataset.filter;
+                    
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+
+                    productCards.forEach(card => {
+                        if (filter === 'all' || card.dataset.category === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+
+        // Routine builder
+        let currentStep = 1;
+
+        function nextStep() {
+            const skinType = document.querySelector('input[name="skinType"]:checked');
+            if (!skinType) {
+                alert('Please select your skin type');
+                return;
+            }
+
+            document.getElementById('step1').classList.remove('active');
+            document.getElementById('step2').classList.add('active');
+            currentStep = 2;
+        }
+
+        function prevStep() {
+            document.getElementById('step2').classList.remove('active');
+            document.getElementById('step1').classList.add('active');
+            currentStep = 1;
+        }
+
+        function generateRoutine() {
+            const skinType = document.querySelector('input[name="skinType"]:checked');
+            const concerns = Array.from(document.querySelectorAll('input[name="concerns"]:checked')).map(cb => cb.value);
+
+            if (!skinType) {
+                alert('Please select your skin type');
+                return;
+            }
+
+            // Generate routine based on selections
+            const routine = createRoutine(skinType.value, concerns);
+            displayRoutine(routine);
+
+            document.getElementById('step2').classList.remove('active');
+            document.getElementById('step3').classList.add('active');
+            currentStep = 3;
+        }
+
+        function createRoutine(skinType, concerns) {
+            const routines = {
+                'normal': {
+                    morning: ['Gentle Foaming Cleanser', 'Vitamin C Brightening Serum', 'Hyaluronic Hydra Cream'],
+                    evening: ['Gentle Foaming Cleanser', 'Hyaluronic Hydra Cream']
+                },
+                'dry': {
+                    morning: ['Gentle Foaming Cleanser', 'Hyaluronic Hydra Cream', 'Extra Moisturizing Cream'],
+                    evening: ['Gentle Foaming Cleanser', 'Hyaluronic Hydra Cream', 'Overnight Repair Serum']
+                },
+                'oily': {
+                    morning: ['Gentle Foaming Cleanser', 'Niacinamide Pore Refiner', 'Lightweight Moisturizer'],
+                    evening: ['Purifying Clay Mask (2x/week)', 'Gentle Foaming Cleanser', 'Niacinamide Pore Refiner']
+                },
+                'combination': {
+                    morning: ['Gentle Foaming Cleanser', 'Niacinamide Pore Refiner (T-zone)', 'Hyaluronic Hydra Cream'],
+                    evening: ['Gentle Foaming Cleanser', 'Targeted treatments', 'Hyaluronic Hydra Cream']
+                },
+                'sensitive': {
+                    morning: ['Gentle Foaming Cleanser', 'Soothing Serum', 'Gentle Moisturizer'],
+                    evening: ['Gentle Foaming Cleanser', 'Soothing Serum', 'Gentle Moisturizer']
+                }
+            };
+
+            return routines[skinType] || routines['normal'];
+        }
+
+        function displayRoutine(routine) {
+            const resultsDiv = document.getElementById('routineResults');
+            resultsDiv.innerHTML = `
+                <div class="routine-schedule">
+                    <div class="routine-time">
+                        <h4>Morning Routine</h4>
+                        <ol>
+                            ${routine.morning.map(product => `<li>${product}</li>`).join('')}
+                        </ol>
+                    </div>
+                    <div class="routine-time">
+                        <h4>Evening Routine</h4>
+                        <ol>
+                            ${routine.evening.map(product => `<li>${product}</li>`).join('')}
+                        </ol>
+                    </div>
+                </div>
+                <div class="routine-tips">
+                    <h4>Tips for Success</h4>
+                    <ul>
+                        <li>Start slowly and introduce one new product at a time</li>
+                        <li>Always patch test new products before full application</li>
+                        <li>Use sunscreen daily, even on cloudy days</li>
+                        <li>Be consistent - results take 4-6 weeks to show</li>
+                    </ul>
+                </div>
+            `;
+        }
+
+        function resetRoutine() {
+            document.getElementById('step3').classList.remove('active');
+            document.getElementById('step1').classList.add('active');
+            currentStep = 1;
+            
+            // Reset form
+            document.querySelectorAll('input[type="radio"]').forEach(input => input.checked = false);
+            document.querySelectorAll('input[type="checkbox"]').forEach(input => input.checked = false);
+        }
+
+        // Chatbot functionality
+        let chatOpen = false;
+
+        function toggleChat() {
+            const chatbot = document.getElementById('chatbot');
+            chatOpen = !chatOpen;
+            
+            if (chatOpen) {
+                chatbot.classList.add('active');
+            } else {
+                chatbot.classList.remove('active');
+            }
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('chatInput');
+            const message = input.value.trim();
+            
+            if (!message) return;
+
+            // Add user message
+            addMessage(message, 'user');
+            input.value = '';
+
+            // Generate bot response
+            setTimeout(() => {
+                const response = generateBotResponse(message);
+                addMessage(response, 'bot');
+            }, 500);
+        }
+
+        function addMessage(text, sender) {
+            const messagesDiv = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${sender}-message`;
+            messageDiv.innerHTML = `<p>${text}</p>`;
+            messagesDiv.appendChild(messageDiv);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+
+        function generateBotResponse(message) {
+            const messageLower = message.toLowerCase();
+            
+            if (messageLower.includes('acne') || messageLower.includes('breakout') || messageLower.includes('pimple')) {
+                return "For acne-prone skin, I recommend starting with our Gentle Foaming Cleanser to keep pores clean without over-drying. Our Vitamin C Brightening Serum can also help with post-acne marks and overall skin clarity.";
+            } else if (messageLower.includes('dry') || messageLower.includes('dehydrat') || messageLower.includes('moisture')) {
+                return "For dry or dehydrated skin, hydration is key! Our Hyaluronic Hydra Cream provides deep, long-lasting moisture. Pair it with our Gentle Foaming Cleanser to avoid stripping your skin's natural oils.";
+            } else if (messageLower.includes('aging') || messageLower.includes('wrinkle') || messageLower.includes('fine line')) {
+                return "For anti-aging concerns, our Retinol Renewal Complex is excellent for reducing fine lines and improving skin texture. Start slowly with 2-3 times per week. Always use it in the evening and follow with moisturizer.";
+            } else if (messageLower.includes('sensitive') || messageLower.includes('irritat') || messageLower.includes('react')) {
+                return "For sensitive skin, gentle is best! Our Gentle Foaming Cleanser is pH-balanced and perfect for reactive skin. Start with basic cleansing and moisturizing before adding any active ingredients.";
+            } else if (messageLower.includes('dark spot') || messageLower.includes('pigment') || messageLower.includes('uneven')) {
+                return "For dark spots and uneven skin tone, our Vitamin C Brightening Serum is perfect! It contains 20% stabilized vitamin C to help fade discoloration and brighten your complexion over time.";
+            } else if (messageLower.includes('routine') || messageLower.includes('order') || messageLower.includes('step')) {
+                return "A basic routine order is: 1) Cleanser, 2) Serum, 3) Moisturizer. Morning: add sunscreen. Evening: you can use treatments like retinol. Always introduce new products one at a time!";
+            } else {
+                return "Thank you for your question! While I can help with general skincare advice about acne, aging, dry skin, sensitive skin, and routine building, for more specific concerns, please contact our skincare experts directly.";
+            }
+        }
+
+        // Chat input enter key
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatInput = document.getElementById('chatInput');
+            chatInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    sendMessage();
+                }
+            });
+        });
+
+        // Contact form
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.querySelector('.contact-form');
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your message! We\'ll get back to you soon.');
+                this.reset();
+            });
+        });
+    </script>
+</body>
+</html>
